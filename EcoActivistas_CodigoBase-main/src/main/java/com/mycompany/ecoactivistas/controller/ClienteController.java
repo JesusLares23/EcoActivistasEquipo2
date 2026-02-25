@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.ecoactivistas.controller;
 
 import com.mycompany.ecoactivistas.dao.ClienteDAO;
@@ -12,7 +9,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author martinbl
+ * @author 233383, 
  */
 public class ClienteController {
 
@@ -23,7 +20,8 @@ public class ClienteController {
     }
 
     // Insertar un nuevo cliente con validaciones
-    public boolean agregarCliente(String nombre, String direccion, String telefonos) {
+    public boolean agregarCliente(String nombre, String direccion, 
+            String telefonos) {
         if (nombre == null || nombre.trim().isEmpty()) {
             System.err.println("El nombre del cliente no puede estar vacío.");
             return false;
@@ -55,7 +53,8 @@ public class ClienteController {
     }
 
     // Actualizar cliente con validaciones
-    public boolean actualizarCliente(int idCliente, String nombre, String direccion, String telefonos) {
+    public boolean actualizarCliente(int idCliente, String nombre, 
+            String direccion, String telefonos) {
         if (idCliente <= 0) {
             System.err.println("ID de cliente inválido.");
             return false;
@@ -90,7 +89,8 @@ public class ClienteController {
         DefaultTableModel modelo = new DefaultTableModel(null, columnas);
         List<Cliente> lista = clienteDAO.obtenerTodos();
         for (Cliente c : lista) {
-            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), c.getDireccion(), c.getTelefonos()});
+            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), 
+                c.getDireccion(), c.getTelefonos()});
         }
         return modelo;
     }
@@ -100,7 +100,8 @@ public class ClienteController {
         DefaultTableModel modelo = new DefaultTableModel(null, columnas);
         List<Cliente> lista = clienteDAO.obtenerTodosPorFiltro(filtro);
         for (Cliente c : lista) {
-            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), c.getDireccion(), c.getTelefonos()});
+            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), 
+                c.getDireccion(), c.getTelefonos()});
         }
         return modelo;
     }
@@ -110,7 +111,8 @@ public class ClienteController {
         DefaultTableModel modelo = new DefaultTableModel(null, columnas);
         List<Cliente> lista = clienteDAO.obtenerTodosPorFiltro(filtro);
         for (Cliente c : lista) {
-            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), c.getTelefonos()});
+            modelo.addRow(new Object[]{c.getIdCliente(), c.getNombre(), 
+                c.getTelefonos()});
         }
         return modelo;
     }

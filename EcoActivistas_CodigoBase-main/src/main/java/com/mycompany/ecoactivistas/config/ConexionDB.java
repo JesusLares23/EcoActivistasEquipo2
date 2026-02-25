@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.ecoactivistas.config;
 
 import java.io.IOException;
@@ -13,7 +10,7 @@ import java.util.Properties;
 
 /**
  *
- * @author martinbl
+ * @author 233383, 
  */
 public class ConexionDB {
     private static String url;
@@ -23,7 +20,7 @@ public class ConexionDB {
 
     static {
         try (InputStream input = ConexionDB.class.getClassLoader()
-                                                 .getResourceAsStream("db.properties")) {
+                .getResourceAsStream("db.properties")) {
             Properties props = new Properties();
             if (input == null) {
                 throw new RuntimeException("No se encontró el archivo db.properties");
@@ -39,7 +36,8 @@ public class ConexionDB {
             Class.forName(driver);
 
         } catch (IOException | ClassNotFoundException ex) {
-            throw new RuntimeException("Error cargando configuración de BD: " + ex.getMessage(), ex);
+            throw new RuntimeException("Error cargando configuración de BD: " 
+                    + ex.getMessage(), ex);
         }
     }
 

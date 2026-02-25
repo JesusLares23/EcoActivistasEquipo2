@@ -1,18 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.mycompany.ecoactivistas.config.vistas;
 
 import java.awt.CardLayout;
 
 /**
  *
- * @author martinbl
+ * @author 233383, 
  */
 public class FrmPrincipal extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmPrincipal.class.getName());
+    private static final java.util.logging.Logger logger = 
+            java.util.logging.Logger.getLogger(FrmPrincipal.class.getName());
 
     /**
      * Creates new form FrmPrincipal
@@ -24,6 +22,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         pnlContenido.add(new FrmClientes(), "clientes");
         pnlContenido.add(new FrmActivistas(), "activistas");
         pnlContenido.add(new FrmProblemas(), "problemas");
+        
+        this.setVisible(true);
     }
 
     /**

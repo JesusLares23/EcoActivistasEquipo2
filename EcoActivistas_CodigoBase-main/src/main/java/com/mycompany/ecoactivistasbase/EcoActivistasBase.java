@@ -1,16 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.ecoactivistasbase;
 
+import com.mycompany.ecoactivistas.config.vistas.FrmPrincipal;
+
 /**
  *
- * @author martinbl
+ * @author 233383, 
  */
 public class EcoActivistasBase {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FrmPrincipal fp = new FrmPrincipal();
     }
 }
